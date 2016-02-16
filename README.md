@@ -23,15 +23,15 @@ Requests should be done to specific php files in the server that will include th
 
 - Create a folder on the root of your website called 'phaser' and move Phaser.js and Phaser.php in there
 - Include the Phaser.js in your HTML file (or the file that will be loaded in the browser):
-´´´html
+```html
 <script src="phaser/phaser.js"></script>
-´´´
+```
 - When writing a event function in javascript in your HTML, for example a click event, use the following function to make a dynamic request to a PHP file:
-´´´javascript
+```javascript
 function funcCalledOnAClick() {
 	async({url:'phpFileToAnswerRequest.php', run:'functionToRunOnThatPhpFile()'});
 }
-´´´
+```
 
 ....more info to come...
 
