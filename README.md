@@ -1,6 +1,6 @@
 # Phaser - Framework for Web Applications
 
-OBS: This documentation is beeing updated with instructions and xamples on how to use the framework.
+OBS: This documentation is beeing updated with instructions and samples on how to use the framework.
 
 ## What is?
 
@@ -51,5 +51,5 @@ JavaScipts side:
 - cache.update();
 
 PHP side:
-p_runjs();
-p_makeCache();
+- p_runjs();
+- p_makeCache();
