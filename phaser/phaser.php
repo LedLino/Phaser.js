@@ -82,7 +82,7 @@ function p_getFileContents($file) {
 
 function p_run( $funcName = null, $allowedFunctions = null){
 	$allowed = $allowedFunctions ? explode(",", $allowedFunctions) : array( $funcName ); // se não for setado as funções permitidas, a permitida vai ser a propira passada.
-	if( !function_exists( $funcName ) or !in_array( $funcName, $allowed) ) echo "<span class='xdebug-error'>Phasing Error - run($funcName): Can't run function</span>";
+	if( !function_exists( $funcName ) or !in_array( $funcName, $allowed) ) echo "<span class='xdebug-error'>Phaser Error - run($funcName): Can't run function</span>";
 	else $funcName();
 }
 

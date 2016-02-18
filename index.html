@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Examples for Phaser.js</title>
+	<script src="phaser/phaser.js"></script>
+</head>
+
+<body>
+
+<h1>Examples of usage for Phaser.js</h1>
+
+<div id="ex1">
+	Example 1
+	<button onclick="myAsyncJS1">Click here</button>
+</div>
+
+<br>
+
+<form id="myform" name="myform" method="POST" action="loadmeasync.php">
+	<fieldset>
+		<legend>Example 2</legend>
+		<div id="ex2">
+			<input type="text" name="field1" placeholder="Field 1"/>
+			<input type="text" name="field2" placeholder="Field 2"/>
+			<br/>
+			<input type="submit" id="formBtn" value="Submit"/>
+		</div>
+	</fieldset>
+</form>
+
+<br>
+
+<div class="ex3">
+	Example 3
+	<button id="btn3">Click here</button>
+</div>
+
+<div class="ex3">
+	Example 3
+</div>
+
+</body>
+
+
+
+
+<script language="javascript">
+
+// If there's a function named 'autostart' Phaser calls it as soon as the page finishes loading. 
+function autostart() {
+	// get the element you want to modify with 'element' function
+	// use the '.set' command to set various properties to the element. it can be css, attributes or events
+	element( 'h1' ).set({ css:"color:red" });
+	element( '#ex1' ).set({ css:"color:blue", onclick:"myAsyncJS1()" });
+	element( '.ex3' ).set({ color:"green", onclick:"myAsyncJS3()" });
+
+	element( "#myform" ).set({ onsubmit:"event.returnValue=false; myAsyncJS2(); return false;" });
+
+	form.login.focus();
+}
+
+
+//
+function myAsyncJS1() {
+	async({
+		// use the URL parameter to define the script file on the server to be run
+		url: 'loadmeasync.php',
+		// use the PHASE command to define which function of the script file to run
+		// if you ommit this parameter, Phaser will look for a function with the same name
+		// as the function calling this ASYNC command, in this case "myAsyncJS3"
+		phase: 'myAsyncPHP1'
+	});
+}
+
+function myAsyncJS2() {
+	async({
+		url: 'loadmeasync.php',
+		// use the FORM command to send a form through POST method
+		form: myform,
+		phase: 'myAsyncPHP2'
+	});
+}
+
+function myAsyncJS3() {
+	// The ASYNC command is the command that fetches dynamic information from the server
+	async({
+		url: 'loadmeasync.php',
+		phase: 'myAsyncPHP3',
+		// use the RUN parameter to run a JavaScript command after the content is fetched
+		run: 'element(".ex3").update()'
+	});
+}
+
+</script>
