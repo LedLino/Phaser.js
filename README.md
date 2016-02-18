@@ -2,7 +2,7 @@
 
 OBS: This documentation is beeing updated with instructions and samples on how to use the framework.
 
-## What is?
+## What is it?
 
 Phaser is a Javascript/PHP framework, currently in beta version, that smoothens the edge between client-side coding (JS) and server-side programming (PHP) to allow for an easier way of coding dynamic webpages.
 
