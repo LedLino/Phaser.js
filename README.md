@@ -33,7 +33,7 @@ function funcCalledOnAClick() {
 }
 ```
 Please refer to the example files (index.html and loadmeasync.php) to see practical examples.
-If yu have a functional server put both files in there and load the index.html in your browser, to see the examples working.
+If you have a functional server put both files in there and load the index.html in your browser, to see the examples working.
 
 ## Version Info
 
