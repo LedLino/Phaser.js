@@ -32,8 +32,8 @@ function funcCalledOnAClick() {
 	async({url:'phpFileToAnswerRequest.php', run:'functionToRunOnThatPhpFile()'});
 }
 ```
-
-....more info to come...
+Please refer to the example files (index.html and loadmeasync.php) to see practical examples.
+If yu have a functional server put both files in there and load the index.html in your browser, to see the examples working.
 
 ## Version Info
 
@@ -42,6 +42,7 @@ v.0.1.0 -------------------------------------
 Released functions:
 
 JavaScipts side:
+- async({});
 - element("selector").set({propery:value});
 - element("selector").update()
 - element("selector").update(attributes)
