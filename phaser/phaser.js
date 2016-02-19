@@ -186,7 +186,6 @@ console.log("Phaser.js initiated");
 				//setTimeout(function(){document.body.removeChild(window.cacheFrame);},3000);
 
 				//for(var i in args)if(i=='run')
-				alert(typeof args.run);
 				if(typeof args.run=='function') args.run();
 				else if(typeof args.run=='string')
 					try{eval(args.run)}
