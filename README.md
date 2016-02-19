@@ -29,7 +29,7 @@ Requests should be done to specific php files in the server that will include th
 - When writing a event function in javascript in your HTML, for example a click event, use the following function to make a dynamic request to a PHP file:
 ```javascript
 function funcCalledOnAClick() {
-	async({url:'phpFileToAnswerRequest.php', run:'functionToRunOnThatPhpFile()'});
+	async({ url:'phpFileToAnswerRequest.php', phase:'functionToRunOnThatPhpFile()' });
 }
 ```
 Please refer to the example files (index.html and loadmeasync.php) to see practical examples.
