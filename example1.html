@@ -17,7 +17,7 @@
 
 <br>
 
-<form id="myform" name="myform" method="POST" action="loadmeasync.php">
+<form id="myform">
 	<fieldset>
 		<legend>Example 2</legend>
 		<div id="ex2">
@@ -55,8 +55,6 @@ function autostart() {
 	element( '#ex1' ).set({ css:"color:blue", onclick:"myAsyncJS1()" });
 	element( "#myform" ).set({ onsubmit:"myAsyncJS2(); return false;" });
 	element( '.ex3' ).set({ color:"green", onclick:"myAsyncJS3()" });
-
-	form.login.focus();
 }
 
 
@@ -77,7 +75,7 @@ function myAsyncJS2() {
 	async({
 		url: 'example1.php',
 		// use the FORM command to send a form through POST method
-		form: myform,
+		form: 'myform',
 		phase: 'myAsyncPHP2'
 	});
 }
