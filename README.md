@@ -2,9 +2,9 @@
 
 OBS: This documentation is beeing updated with instructions and samples on how to use the framework.
 
-## What is?
+## What is it?
 
-Phaser is a Javascript/PHP framework, currently in beta version, that smoothens the edge between client-side coding (JS) and server-side programming (PHP) to allow for an easier way of coding dynamic webpages.
+Phaser is a Javascript/PHP framework, currently in beta version, that builds a bridge over the gap between client-side coding (JavaScript) and server-side programming (PHP). It provide functions to integrate the two sides, simplifying and making more intuitive the code writing.
 
 The main feature of the framework is that you can easily send a request to the server using javascript and easily modify parts of the current HTML withou having to write complex javascript code.
 
