@@ -1,10 +1,10 @@
-# Phaser - Framework for Web Applications
+# Warp - Framework for Web Applications
 
 OBS: This documentation is beeing updated with instructions and samples on how to use the framework.
 
 ## What is it?
 
-Phaser is a Javascript/PHP framework, currently in beta version, that builds a bridge over the gap between client-side coding (JavaScript) and server-side programming (PHP). It provide functions to integrate the two sides, simplifying and making more intuitive the code writing.
+Warp is a Javascript/PHP framework, currently in beta version, that builds a bridge over the gap between client-side coding (JavaScript) and server-side programming (PHP). It provide functions to integrate the two sides, simplifying and making more intuitive the code writing.
 
 The main feature of the framework is that you can easily send a request to the server using javascript and easily modify parts of the current HTML withou having to write complex javascript code.
 
@@ -14,15 +14,15 @@ OBS: Although there are other functions working at the moment, the example will 
 
 ## How does it work?
 
-This framework is made of 2 files: Phaser.js and Phaser.php
-Phaser.js contains functions that can help you make dynamic requests to the server, fetch the results and update the HTML elements in the browser in a very easy way.
+This framework is made of 2 files: Warp.js and Warp.php
+Warp.js contains functions that can help you make dynamic requests to the server, fetch the results and update the HTML elements in the browser in a very easy way.
 
-Requests should be done to specific php files in the server that will include the Phaser.php file. This file contains functions that will get the data requested and modify the HTML in very few steps.
+Requests should be done to specific php files in the server that will include the Warp.php file. This file contains functions that will get the data requested and modify the HTML in very few steps.
 
 ## How to use it?
 
-- Create a folder on the root of your website called 'phaser' and move Phaser.js and Phaser.php in there
-- Include the Phaser.js in your HTML file (or the file that will be loaded in the browser):
+- Create a folder on the root of your website called 'phaser' and move Warp.js and Warp.php in there
+- Include the Warp.js in your HTML file (or the file that will be loaded in the browser):
 ```html
 <script src="phaser/phaser.js"></script>
 ```
