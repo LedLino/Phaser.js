@@ -1,6 +1,6 @@
 <?php
 // Include this file for Phaser to work
-require "phaser/phaser.php";
+require "warp/warp.php";
 
 var_dump($_POST);
 
@@ -8,7 +8,7 @@ var_dump($_POST);
 
 // Reserved function name. Optional to include.
 // This funtion will be called whenever this page is loaded through the address bar
-function p_normalLoad() {
+function warpInitNormal() {
 	echo "Ooops, an error ocurred: This page can't be loaded directly";
 }
 
@@ -17,7 +17,7 @@ function p_normalLoad() {
 
 // Reserved function name. Optional to include.
 // This funtion will be called whenever this page is loaded through Phaser async command
-function p_asyncLoad() {
+function warpInitWarp() {
 }
 
 
@@ -32,7 +32,7 @@ function myAsyncPHP1() {
 
 
 	// typing javascript directly here will have an effect on the HTML
-	p_runjs("element( '#ex1' ).set({ html:'This text was updated through JavaScript typed directly in the PHP file' });");
+	warpJS("warp.obj( '#ex1' ).set({ html:'This text was updated through JavaScript typed directly in the PHP file' });");
 }
 
 
@@ -63,9 +63,9 @@ function myAsyncPHP2() {
 	);
 
 	// create the buffer of changes to the element #ex2
-	p_makeCache("#ex2",$changes);
+	warpPack("#ex2",$changes);
 	// calls the update command that gets the changes in the buffer and applies to the element
-	p_runjs("element('#ex2').update();");
+	warpJS("warp.obj('#ex2').update();");
 }
 
 
@@ -80,7 +80,7 @@ function myAsyncPHP3() {
 	$changes['text-decoration:'] = "underline";
 
 	// create the buffer of changes for all elements of class 'ex3'
-	p_makeCache(".ex3",$changes);
+	warpPack(".ex3",$changes);
 	// the update of this elements is beeing done in the ASYNC command itself,
 	// in the RUN parameter
 }

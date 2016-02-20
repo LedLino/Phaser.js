@@ -2,13 +2,13 @@
 <html>
 
 <head>
-	<title>Examples for Phaser.js</title>
-	<script src="phaser/phaser.js"></script>
+	<title>Examples for Warp</title>
+	<script src="warp/warp.js"></script>
 </head>
 
 <body>
 
-<h1>Examples of usage for Phaser.js</h1>
+<h1>Examples of usage for Warp</h1>
 
 <div id="ex1">
 	Example 1
@@ -51,41 +51,41 @@
 function autostart() {
 	// get the element you want to modify with 'element' function
 	// use the '.set' command to set various properties to the element. it can be css, attributes or events
-	element( 'h1' ).set({ css:"color:red" });
-	element( '#ex1' ).set({ css:"color:blue", onclick:"myAsyncJS1()" });
-	element( "#myform" ).set({ onsubmit:"myAsyncJS2(); return false;" });
-	element( '.ex3' ).set({ color:"green", onclick:"myAsyncJS3()" });
+	warp.obj( 'h1'      ).set({ css:"color:red" });
+	warp.obj( '#ex1'    ).set({ css:"color:blue", onclick:"myAsyncJS1()" });
+	warp.obj( "#myform" ).set({ onsubmit:"myAsyncJS2(); return false;" });
+	warp.obj( '.ex3'    ).set({ color:"green", onclick:"myAsyncJS3()" });
 }
 
 
 // Each of the following function will be called when one of the buttons in the HTML is clicked
 function myAsyncJS1() {
 	// The ASYNC command is the command that fetches dynamic information from the server
-	async({
+	warp({
 		// use the URL parameter to define the script file on the server to be run
 		url: 'example1.php',
 		// use the PHASE command to define which function of the script file to run
 		// if you ommit this parameter, Phaser will look for a function with the same name
 		// as the function calling this ASYNC command, in this case "myAsyncJS3"
-		phase: 'myAsyncPHP1'
+		freq: 'myAsyncPHP1'
 	});
 }
 
 function myAsyncJS2() {
-	async({
+	warp({
 		url: 'example1.php',
 		// use the FORM command to send a form through POST method
 		form: 'myform',
-		phase: 'myAsyncPHP2'
+		freq: 'myAsyncPHP2'
 	});
 }
 
 function myAsyncJS3() {
-	async({
+	warp({
 		url: 'example1.php',
-		phase: 'myAsyncPHP3',
+		freq: 'myAsyncPHP3',
 		// use the RUN parameter to run a JavaScript command after the content is fetched
-		run: 'element(".ex3").update()'
+		run: 'warp.obj(".ex3").update();'
 	});
 }
 
